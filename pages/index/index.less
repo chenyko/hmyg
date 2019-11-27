@@ -1,0 +1,41 @@
+.swiper-warp {
+  height: 340rpx;
+}
+
+.navi {
+  display: flex;
+  padding: 5rpx 0;
+
+  .navi-item {
+    flex: 1;
+    text-align: center;
+
+    image {
+      width: 70%;
+    }
+  }
+}
+
+.floor_warp {
+  .floor_group {
+    height: 70rpx+((750rpx/3)*386 /232);
+    margin: 15rpx 0;
+    .floor_group_title {}
+    .floor_group_content {
+      //  overflow: hidden;
+      .floor_item {
+        float: left;
+        width: 33.33%;
+        
+        image{
+          display: block;
+        }
+      }
+      .floor_item:nth-last-child(-n+4){
+        image{
+          height:( (750rpx/3)*386 /232/2)+1
+        }
+      }
+    }
+  }
+}

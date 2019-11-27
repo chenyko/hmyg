@@ -1,0 +1,37 @@
+<!-- 轮播图开始 -->
+<view class='swiper-warp'>
+    <swiper  indicator-dots  autoplay circular >
+      <swiper-item wx:for='{{swiperList}}' wx:key='goods_id'>
+        <image mode='widthFix' src="{{item.image_src}}" />
+      </swiper-item>
+   </swiper>
+</view>
+ <!--轮播图结束  -->
+
+<!-- 导航栏开始 -->
+<view class="navi">
+  <navigator class="navi-item" wx:for='{{navs}}' wx:key='name'>
+    <image  src="{{item.image_src}}" mode="widthFix"  />
+  </navigator>
+</view>
+<!-- 导航栏结束 -->
+
+<!-- 楼层开始 -->
+<view class="floor_warp">
+  <!-- 外层循环 -->
+  <view class="floor_group" wx:for="{{floorList}}"  wx:for-item="item1" wx:for-index="index1" wx:key="item1.floor_title">
+    <!-- 标题 -->
+   <view class="floor_group_title">
+     <image  src="{{item1.floor_title.image_src}}" mode="widthFix" />
+   </view>
+   <!-- 内容 -->
+   <view class="floor_group_content" wx:for="{{item1.product_list}}"  wx:for-item="item2" wx:for-index="index2" wx:key="item2.name">
+   <navigator class="floor_item" >
+
+     <image  src="{{item2.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}"  />
+   </navigator>
+   </view>
+  </view>
+</view>
+
+<!-- 楼层结束 -->

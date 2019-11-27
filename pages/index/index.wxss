@@ -1,0 +1,28 @@
+.swiper-warp {
+  height: 340rpx;
+}
+.navi {
+  display: flex;
+  padding: 5rpx 0;
+}
+.navi .navi-item {
+  flex: 1;
+  text-align: center;
+}
+.navi .navi-item image {
+  width: 70%;
+}
+.floor_warp .floor_group {
+  height: 485.94827586rpx;
+  margin: 15rpx 0;
+}
+.floor_warp .floor_group .floor_group_content .floor_item {
+  float: left;
+  width: 33.33%;
+}
+.floor_warp .floor_group .floor_group_content .floor_item image {
+  display: block;
+}
+.floor_warp .floor_group .floor_group_content .floor_item:nth-last-child(-n+4) image {
+  height: 208.97413793rpx;
+}
