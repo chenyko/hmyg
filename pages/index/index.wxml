@@ -1,3 +1,5 @@
+<!-- 搜索组件 -->
+<searchInput></searchInput>
 <!-- 轮播图开始 -->
 <view class='swiper-warp'>
     <swiper  indicator-dots  autoplay circular >
