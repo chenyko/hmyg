@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+import request from '../../utils/request.js'
 const app = getApp()
 
 Page({
@@ -13,35 +14,29 @@ Page({
     floorList: [],
   },
   onLoad() {
-    wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
-      success: (result) => {
-        // console.log(result);
-        this.setData({
-          swiperList: result.data.message
-        })
-      }
-    });
 
-    wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1/home/catitems',
-      success: (result) => {
-        //  console.log(result);
-        this.setData({
-          navs: result.data.message
-        })
+    // 轮播图数据
+  
+    request({ url:'home/swiperdata' }).then(result=>{
+      this.setData({
+            swiperList: result.data.message
+            })
+    })
 
-      }
-    });
+    // 导航数据
 
-    wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1/home/floordata',
-      success: (result) => {
-        // console.log(result.data.message);
-        this.setData({
-          floorList:result.data.message
-        })
-      }
+    request({ url:'home/catitems' }).then(result=>{
+      this.setData({
+              navs: result.data.message
+            })
+    })
+
+    // 楼层数据
+    
+    request({ url:'home/floordata' }).then(result=>{
+      this.setData({
+            floorList:result.data.message
+            })
     })
   }
 })
