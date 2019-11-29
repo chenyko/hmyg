@@ -1,18 +1,44 @@
 .category {
   display: flex;
   height: calc(100vh - 80rpx);
-  background-color: aqua;
 }
 .category .left {
   width: 200rpx;
   background-color: blueviolet;
   overflow: auto;
+}
+.category .left .cate_name .name_item {
+  font-size: 28rpx;
+  height: 80rpx;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.category .right {
+.name_item.active {
+  border-left: 5rpx solid #eb4450;
+  color: #eb4450;
+}
+.right {
   flex: 1;
-  background-color: pink;
   overflow: auto;
+}
+.right .right_group .right_group_tite {
+  height: 80rpx;
+  font-size: 26rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right .right_group .right_group_content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.right .right_group .right_group_content .right_item {
+  width: 33.33%;
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.right .right_group .right_group_content .right_item image {
+  width: 50%;
 }
