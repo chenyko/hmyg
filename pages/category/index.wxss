@@ -1,1 +1,18 @@
-/* pages/category/index.wxss */
+.category {
+  display: flex;
+  height: calc(100vh - 80rpx);
+  background-color: aqua;
+}
+.category .left {
+  width: 200rpx;
+  background-color: blueviolet;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category .right {
+  flex: 1;
+  background-color: pink;
+  overflow: auto;
+}
